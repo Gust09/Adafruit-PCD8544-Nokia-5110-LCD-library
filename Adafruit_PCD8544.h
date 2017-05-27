@@ -35,7 +35,6 @@ All text above, and the splash screen must be included in any redistribution
   typedef uint8_t PortMask;
 #endif
 
-
 #define BLACK 1
 #define WHITE 0
 
@@ -80,6 +79,9 @@ class Adafruit_PCD8544 : public Adafruit_GFX {
   
   void command(uint8_t c);
   void data(uint8_t c);
+  
+  void setBacklightPin(uint8_t pin);
+  void setBacklight(uint8_t val);
   
   void setContrast(uint8_t val);
   void clearDisplay(void);
